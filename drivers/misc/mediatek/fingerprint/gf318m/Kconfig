@@ -1,0 +1,7 @@
+
+config FINGERPRINT_GOODIX_GF318M
+	bool "FINGERPRINT_GOODIX_GF318M"
+	default n
+	help
+	  use goodix fingerprint gx358/gx368
+

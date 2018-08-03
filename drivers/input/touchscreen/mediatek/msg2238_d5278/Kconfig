@@ -1,0 +1,18 @@
+#
+# Touchscreen driver configuration
+#
+if TOUCHSCREEN_MTK_MSG2238
+
+config TP_MSG2238_COMPATIBLE
+        bool TP_MSG2238_COMPATIBLE
+        default n
+	help
+          CONFIG_TP_MSG2238_COMPATIBLE
+		  
+config TOUCHSCREEN_MTK_MSG2238_PROXIMITY
+        bool TOUCHSCREEN_MTK_MSG2238_PROXIMITY
+        default n
+	help
+          CONFIG_TOUCHSCREEN_MTK_MSG2238_PROXIMITY
+		  
+endif

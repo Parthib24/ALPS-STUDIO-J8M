@@ -1,0 +1,12 @@
+#
+# Touchscreen driver configuration
+#
+if TOUCHSCREEN_MTK_MSG5846
+
+config TP_MSG5846_COMPATIBLE
+        bool TP_MSG5846_COMPATIBLE
+        default n
+	help
+          CONFIG_TP_MSG5846_COMPATIBLE
+
+endif

@@ -1,0 +1,6 @@
+config FINGERPRINT_FPS998
+	bool "FINGERPRINT_FPS998"
+	default n
+	help
+	  use cdfinger fingerprint fps9051
+

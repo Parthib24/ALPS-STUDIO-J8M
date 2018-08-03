@@ -1,0 +1,21 @@
+
+config MTK_LTR_559
+	bool "MTK_LTR_559 for MediaTek package"
+	default n
+	help
+	It support different type sensor
+	in this platform. If this option
+	is set, it will support ambient
+	and light sensor MTK_LTR_559.
+
+
+config LTR559_PS_MEAS_RATE_LOW
+	bool "USE LOW MEAS_RATE FOR PSENSOR LTR559"
+	default n
+	help
+	Say Y here if you have ft5x0x touch panel CUST_FTS_APK_DEBUG.
+
+	If unsure, say N.
+
+	To compile this dirver as a module, choose M here: the
+	module will be called.

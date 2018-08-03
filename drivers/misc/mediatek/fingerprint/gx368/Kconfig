@@ -1,0 +1,18 @@
+
+config FINGERPRINT_GX368
+	bool "FINGERPRINT_GX368"
+	default n
+	help
+	  use goodix fingerprint gx358/gx368
+
+config FINGERPRINT_USING_EXT_LDO
+	bool "FINGERPRINT_USING_EXT_LDO"
+	default n
+	help 
+		if this is config,the fingerprint using ext_ldo supply 2.8v.use a gpio to control it 
+
+config FINGERPRINT_GX368_USING_32_BIT
+	bool "FINGERPRINT_GX368_USING_32_BIT"
+	default n
+	help 
+		if this is config,the fingerprint using 32 bit driver ,else using 64 bit driver

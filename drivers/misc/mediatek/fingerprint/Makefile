@@ -1,0 +1,19 @@
+ccflags-y += -I$(srctree)/drivers/misc/mediatek/hwmon/include
+
+
+
+ccflags-$(CONFIG_FINGERPRINT_VGP1_POWER) += -DFINGERPRINT_VGP1_POWER
+
+obj-y   +=  fingerprint.o
+
+obj-$(CONFIG_FINGERPRINT_GX368)	+=  gx368/
+obj-$(CONFIG_FINGERPRINT_GX368_NEW)	+=  gx368_new/
+obj-$(CONFIG_FINGERPRINT_SW9351)	+=  sw9351/
+obj-$(CONFIG_FINGERPRINT_GOODIX_GF318M)	+=  gf318m/
+obj-$(CONFIG_FINGERPRINT_SW9562)	+=  sw9562/
+obj-$(CONFIG_FINGERPRINT_SW9651)	+=  sw9562/
+obj-$(CONFIG_FINGERPRINT_GOODIX_GF5216)	+=  gf5216/
+obj-$(CONFIG_FINGERPRINT_SW9051)	+=  sw9051/
+obj-$(CONFIG_FINGERPRINT_FPS998)	+=	fps998/
+obj-$(CONFIG_FINGERPRINT_SUNWAVE_REE)	+=	sunwave_ree/
+obj-$(CONFIG_FINGERPRINT_SUNWAVE_TEE)	+=	sunwave_tee/

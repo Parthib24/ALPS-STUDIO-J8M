@@ -1,0 +1,43 @@
+#subdir-ccflags-y += -Werror
+ccflags-y += -I$(srctree)/drivers/misc/mediatek/include/mt-plat/
+ccflags-y += -I$(srctree)/drivers/input/touchscreen/mediatek
+# In case the platform does NOT support this type of sensors
+
+ifneq ($(CONFIG_TOUCHSCREEN_MTK),)
+obj-y   +=  mtk_tpd.o tpd_button.o tpd_calibrate.o tpd_debug.o \
+		tpd_default.o tpd_init.o tpd_misc.o tpd_setting.o
+endif
+
+obj-$(CONFIG_TOUCHSCREEN_MTK)   += tpd_common_probe.o
+
+obj-$(CONFIG_TOUCHSCREEN_MTK_GT1151TB)	+=  GT1151TB/
+obj-$(CONFIG_TOUCHSCREEN_MTK_GT910)	+=  GT910/
+obj-$(CONFIG_TOUCHSCREEN_MTK_GT9XXTB_HOTKNOT)	+=  GT9XXTB_hotknot/
+obj-$(CONFIG_TOUCHSCREEN_MTK_GT9XX_HOTKNOT)	+=  GT9XX_hotknot/
+obj-$(CONFIG_TOUCHSCREEN_MTK_GT9XX_HOTKNOT_PHONE)	+=  GT9XX_hotknot_phone/
+obj-$(CONFIG_TOUCHSCREEN_MTK_SYNAPTICS_I2C_RMI4)	+=  synaptics_i2c_rmi4/
+obj-$(CONFIG_TOUCHSCREEN_MTK_GT928)	+=  GT928/
+obj-$(CONFIG_TOUCHSCREEN_MTK_GT9XX_HOTKNOT_SCP)	+=  GT9XX_hotknot_scp/
+obj-$(CONFIG_TOUCHSCREEN_MTK_GT911)	+=  GT911/
+obj-$(CONFIG_TOUCHSCREEN_MTK_FT5X0X)	+=  ft5x0x/
+obj-$(CONFIG_TOUCHSCREEN_MTK_MSG2238)	+=  msg2238/
+obj-$(CONFIG_TOUCHSCREEN_MTK_MSG2238_D517G)	+=  msg2238_d517g/
+obj-$(CONFIG_TOUCHSCREEN_MTK_MSG2238_D517H)	+=  msg2238_d517h/
+obj-$(CONFIG_TOUCHSCREEN_MTK_MSG2238_D517H_MMX)	+=  msg2238_d517h_mmx/
+obj-$(CONFIG_TOUCHSCREEN_MTK_MSG2238_D517J)	+=  msg2238_d517j_mmx/
+obj-$(CONFIG_TOUCHSCREEN_MTK_MSG2256A_B55016)	+=  msg2256a_b55016/
+#obj-y                                           +=  msg2238_d517j_mmx/
+obj-$(CONFIG_TOUCHSCREEN_MTK_MSG2238_D517I)	+=  msg2238_d517i_mobiistar/
+obj-$(CONFIG_TOUCHSCREEN_MTK_MSG2238_B50048)	+=  msg2238_b50048/
+obj-$(CONFIG_TOUCHSCREEN_MTK_MSG2238_B50028)	+=  msg2238_b50028/
+obj-$(CONFIG_TOUCHSCREEN_MTK_SYNAPTICS_3320_50) +=  synaptics_3320_50/
+obj-$(CONFIG_TOUCHSCREEN_MTK_GT9271TB_HOTKNOT) +=  GT9271TB_hotknot/
+obj-$(CONFIG_TOUCHSCREEN_MTK_FT3327)  += ft3327/
+obj-$(CONFIG_TOUCHSCREEN_MTK_FT3427)  += ft3427/
+#obj-$(CONFIG_TOUCHSCREEN_UNIFIED_DRIVER_4)	+=  unified_driver_4/
+obj-$(CONFIG_TOUCHSCREEN_MTK_MSG5846_V55308)  += msg5846_v55308/
+obj-$(CONFIG_TOUCHSCREEN_MTK_GT915L_V52516)	+=  GT915L_V52516/
+obj-$(CONFIG_TOUCHSCREEN_MTK_FT5436_V52516)	+=  FT5436_V52516/
+obj-$(CONFIG_TOUCHSCREEN_MTK_MSG2238_D5278)	+=  msg2238_d5278_1/
+obj-$(CONFIG_TOUCHSCREEN_MTK_FT3X27_V52516_S2)	+=  FT3X27_V52516_S2/
+obj-$(CONFIG_TOUCHSCREEN_MTK_FT6336U)	+=  ft6336u/

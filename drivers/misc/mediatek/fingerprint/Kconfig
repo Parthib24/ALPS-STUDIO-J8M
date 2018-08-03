@@ -1,0 +1,18 @@
+
+config CUSTOM_KERNEL_FINGERPRINT
+	bool "CUSTOM_KERNEL_FINGERPRINT"
+	default n
+	help
+	  fingerprint sensor used to detect fingerprint
+
+
+source "drivers/misc/mediatek/fingerprint/gx368/Kconfig"
+source "drivers/misc/mediatek/fingerprint/gx368_new/Kconfig"
+source "drivers/misc/mediatek/fingerprint/sw9351/Kconfig"
+source "drivers/misc/mediatek/fingerprint/gf318m/Kconfig"
+source "drivers/misc/mediatek/fingerprint/sw9562/Kconfig"
+source "drivers/misc/mediatek/fingerprint/gf5216/Kconfig"
+source "drivers/misc/mediatek/fingerprint/sw9051/Kconfig"
+source "drivers/misc/mediatek/fingerprint/fps998/Kconfig"
+source "drivers/misc/mediatek/fingerprint/sunwave_ree/Kconfig"
+source "drivers/misc/mediatek/fingerprint/sunwave_tee/Kconfig"
